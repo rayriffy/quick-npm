@@ -1,0 +1,45 @@
+{
+  "name": "@rayriffy/quick-npm",
+  "version": "0.0.0",
+  "author": "Phumrapee Limpianchop <mail@rayriffy.com>",
+  "description": "Quick start template for publishing NPM package.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "repository": {
+    "url": "git+https://github.com/rayriffy/quick-npm"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "dev": "pnpm run build --watch",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "prepare": "pnpm build"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "@changesets/cli": "2.26.2",
+    "@tsconfig/node18": "18.2.0",
+    "tsup": "7.1.0",
+    "typescript": "5.1.6",
+    "vitest": "0.32.2"
+  }
+}
