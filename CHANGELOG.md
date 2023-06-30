@@ -1,5 +1,11 @@
 # @rayriffy/quick-npm
 
+## 0.0.1
+
+### Patch Changes
+
+- 950e744: initialize
+
 ## 0.0.5
 
 ### Patch Changes
