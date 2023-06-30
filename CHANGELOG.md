@@ -1,5 +1,11 @@
 # @rayriffy/quick-npm
 
+## 0.0.2
+
+### Patch Changes
+
+- 4b9e803: documentation
+
 ## 0.0.1
 
 ### Patch Changes
