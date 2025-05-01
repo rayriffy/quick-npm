@@ -10,9 +10,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.js"
     }
   },
   "repository": {
@@ -27,19 +27,20 @@
     "dist"
   ],
   "scripts": {
+    "preinstall": "npx only-allow bun",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "dev": "pnpm run build --watch",
-    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
-    "prepare": "pnpm build"
+    "dev": "bun run build --watch",
+    "build": "tsup",
+    "prepare": "bun run build"
   },
   "keywords": [],
   "dependencies": {},
   "devDependencies": {
-    "@changesets/cli": "2.26.2",
-    "@tsconfig/node18": "18.2.0",
-    "tsup": "7.1.0",
-    "typescript": "5.1.6",
-    "vitest": "0.32.2"
+    "@changesets/cli": "2.29.2",
+    "@tsconfig/node22": "22.0.1",
+    "tsup": "8.4.0",
+    "typescript": "5.8.3",
+    "vitest": "3.1.2"
   }
 }
