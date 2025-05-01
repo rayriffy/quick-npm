@@ -32,11 +32,14 @@
     "coverage": "vitest run --coverage",
     "dev": "bun run build --watch",
     "build": "tsup",
-    "prepare": "bun run build"
+    "prepare": "bun run build",
+    "lint": "biome check",
+    "format": "biome check --write"
   },
   "keywords": [],
   "dependencies": {},
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@changesets/cli": "2.29.2",
     "@tsconfig/node22": "22.0.1",
     "tsup": "8.4.0",
