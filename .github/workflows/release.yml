@@ -25,7 +25,7 @@ jobs:
       - name: install
         run: bun install
       - name: build
-        run: bun build
+        run: bun run build
       - name: changesets
         id: changesets
         uses: changesets/action@v1
