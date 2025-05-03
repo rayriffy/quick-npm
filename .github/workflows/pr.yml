@@ -1,0 +1,26 @@
+name: PR Checks
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pr-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: install
+        run: bun install
+      - name: build
+        run: bun run build
+      - name: test
+        run: bun run test
+      - name: lint
+        run: bun run lint
+      - name: preview
+        run: bunx pkg-pr-new publish
