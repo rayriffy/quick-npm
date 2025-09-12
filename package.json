@@ -40,10 +40,10 @@
   "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@changesets/cli": "2.29.2",
-    "@tsconfig/node22": "22.0.1",
-    "tsup": "8.4.0",
-    "typescript": "5.8.3",
-    "vitest": "3.1.2"
+    "@changesets/cli": "2.29.7",
+    "@tsconfig/node22": "22.0.2",
+    "tsup": "8.5.0",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
   }
 }
