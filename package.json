@@ -5,13 +5,12 @@
   "description": "Quick start template for publishing NPM package.",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
+    "./package.json": "./package.json",
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     }
   },
@@ -31,7 +30,7 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "dev": "bun run build --watch",
-    "build": "tsup",
+    "build": "tsdown",
     "prepare": "bun run build",
     "lint": "biome check",
     "format": "biome check --write"
@@ -39,11 +38,11 @@
   "keywords": [],
   "dependencies": {},
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@changesets/cli": "2.29.7",
-    "@tsconfig/node22": "22.0.2",
-    "tsup": "8.5.0",
-    "typescript": "5.9.2",
-    "vitest": "3.2.4"
+    "@biomejs/biome": "2.4.15",
+    "@changesets/cli": "2.31.0",
+    "@tsconfig/node24": "24.0.4",
+    "tsdown": "0.22.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.7"
   }
 }
